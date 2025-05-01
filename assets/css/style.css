@@ -770,7 +770,7 @@ ul,li{
 .background-image {
 	position: absolute;
 	width: 100%;
-	opacity: 0.1;
+	opacity: 0.08;
 	border-radius: 10px;
 	transform: translate(-50%, -50%);
 	top: 50%; 
@@ -895,26 +895,22 @@ p {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
+	cursor: pointer;
 }
-
-
 .logovisi {
 	width: 22%;
 	margin-bottom: 20px;
 }
-
 h1 {
 	color: #12DEDB;
 	font-size: 55px;
 	font-weight: bold;
 }
-
 .button-container {
 	position: absolute;
 	bottom: 20px;
 	right: 20px;
 }
-
 .hover-button {
 	background: none;
 	border: none;
@@ -925,15 +921,45 @@ h1 {
 	gap: 8px;
 	cursor: pointer;
 }
-
 .hover-button i {
-	transition: transform 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
-
 .hover-button:hover i {
 	transform: translateX(5px);
 }
 
+/* VISI Card default */
+#visiCard {
+    transition: background-color 0.6s ease, padding 0.6s ease;
+}
+#visiText {
+    overflow: hidden;
+    transition: height 0.6s ease, opacity 0.3s ease 0.3s;
+    height: 0;
+    opacity: 0;
+    font-size: 1.4rem;
+    font-weight: 400;
+	line-height: 1.3;
+    margin-top: 20px;
+    color: white;
+}
+#visiCard.expanded h1 {
+    color: #ffffff;
+    font-size: 36px;
+    transform: translateX(80px) translateY(-210px);
+    transition: transform 0.6s ease, color 0.6s ease;
+}
+#visiCard.expanded img.logovisi {
+    transform: scale(0.4) translateX(-50px) translateY(-100px);
+    transition: transform 0.6s ease;
+}
+#visiCard.expanded #visiText {
+    opacity: 1;
+	max-width: 700px;
+	max-height: 800px;
+    color: #ffffff;
+    margin-top: -250px;
+}
 
 .section4 {
 	font-family: "Plus Jakarta Sans", sans-serif;
@@ -946,36 +972,84 @@ h1 {
 
 .card-misi {
 	font-family: "Plus Jakarta Sans", sans-serif;
-	margin: auto;
 	position: relative;
 	background: linear-gradient(to bottom, #252742, #1B1732, #000000);
 	border-radius: 60px;
 	padding: 40px;
 	width: 900px;
-    height: 900px;
+    height: 690px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
 	z-index: 1;
+	cursor: pointer;
 }
-.rocket-img {
+.logomisi {
 	width: 22%;
 	margin-bottom: 20px;
 }
-.title {
+h1 {
 	color: #12DEDB;
 	font-size: 55px;
 	font-weight: bold;
-	margin-bottom: 20px;
 }
-.hover-text {
+.button-container {
 	position: absolute;
 	bottom: 20px;
 	right: 20px;
+}
+.hover-button {
+	background: none;
+	border: none;
 	color: white;
-	font-size: 14px;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	cursor: pointer;
+}
+.hover-button i {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.hover-button:hover i {
+	transform: translateX(5px);
+}
+
+/* VISI Card default */
+#misiCard {
+    transition: background-color 0.6s ease, padding 0.6s ease;
+}
+#misiText {
+    overflow: hidden;
+    transition: height 0.6s ease, opacity 0.3s ease 0.3s;
+    height: 0;
+    opacity: 0;
+    font-size: 1.3rem;
+    font-weight: 400;
+	line-height: 1.3;
+    margin-top: 20px;
+    color: white;
+	text-align: left;
+}
+#misiCard.expanded h1 {
+    color: #ffffff;
+    font-size: 36px;
+    transform: translateX(70px) translateY(-220px);
+    transition: transform 0.6s ease, color 0.6s ease;
+}
+#misiCard.expanded img.logomisi {
+    transform: scale(0.4) translateX(-60px) translateY(-150px) !important;
+    transition: transform 0.6s ease;
+}
+#misiCard.expanded #misiText {
+    opacity: 1;
+	max-width: 900px;
+	max-height: 900px;
+    color: #ffffff;
+    margin-top: -200px;
+
 }
 
 .section4 .blob2 {
@@ -1199,10 +1273,7 @@ footer {
 	transition: color 0.3s ease;
 	border-radius: 50%;
 	padding: 5px;
-  }
-
-  
-  
+  }  
   .social-icons a:hover {
 	color: #ffffffc2;
 	background-color: #000000b0;

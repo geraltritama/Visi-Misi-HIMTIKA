@@ -98,3 +98,93 @@
 	});	
 
 })(window.jQuery);
+
+
+// VISI
+document.addEventListener("DOMContentLoaded", function () {
+    const visiCard = document.getElementById('visiCard');
+    const visiButton = document.getElementById('visiButton');
+    const visiText = document.getElementById('visiText');
+    const h1 = document.getElementById('visiTitle');
+    const logo = document.getElementById('visiLogo');
+
+    // Fungsi untuk menangani expand dan collapse
+    function toggleCard() {
+        const isExpanding = !visiCard.classList.contains('expanded');
+
+        visiCard.classList.toggle('expanded');
+
+        if (isExpanding) {
+            // Expand
+            visiText.style.height = visiText.scrollHeight + "px";
+            visiText.style.opacity = "1";
+            h1.style.transform = "translateX(50px) translateY(-300px)";
+            logo.style.transform = "scale(0.4) translateX(-80px) translateY(-300px)";
+        } else {
+        	// Collapse
+			visiText.style.height = visiText.scrollHeight + "px"; // set current height
+			requestAnimationFrame(() => {
+				visiText.style.height = "0px";
+				visiText.style.opacity = "0";
+        	});
+            h1.style.transform = "translateX(0px) translateY(0px)";
+            logo.style.transform = "scale(1) translateY(0px)";
+        }
+
+        // Ganti teks tombol
+        const buttonText = visiButton.querySelector('span');
+        buttonText.textContent = isExpanding ? 'Tutup' : 'Lihat Selengkapnya';
+    }
+
+    // Event listener untuk tombol
+    visiButton.addEventListener('click', function(event) {
+        event.stopPropagation();  // Mencegah event bubbling ke visiCard
+        toggleCard();
+    });
+
+    // Event listener untuk card
+    visiCard.addEventListener('click', toggleCard);
+});
+
+// Misi
+document.addEventListener("DOMContentLoaded", function () {
+    const misiCard = document.getElementById('misiCard');
+    const misiButton = document.getElementById('misiButton');
+    const misiText = document.getElementById('misiText');
+    const h1 = document.getElementById('misiTitle');
+    const logo = document.getElementById('misiLogo');
+
+    // Fungsi untuk menangani expand dan collapse
+    function toggleCard() {
+        const isExpanding = !misiCard.classList.contains('expanded');
+
+        misiCard.classList.toggle('expanded');
+
+        if (isExpanding) {
+            // Expand
+            misiText.style.transition = 'height 0.6s ease, opacity 0.3s ease 0.3s'; // Set transition for expand
+            misiText.style.height = misiText.scrollHeight + "px";
+            misiText.style.opacity = "1";
+            logo.style.transform = "scale(0.4) translateX(-80px) translateY(-300px)";
+        } else {
+            // Collapse without animation
+            misiText.style.transition = 'none'; // Remove transition for instant collapse
+            misiText.style.height = "0px";  // langsung atur height ke 0
+            misiText.style.opacity = "0";   // langsung atur opacity ke 0
+            logo.style.transform = "scale(1) translateY(0px)";
+
+            // After collapse, restore transition for future expansion
+            setTimeout(() => {
+                misiText.style.transition = 'height 0.6s ease, opacity 0.3s ease 0.3s';
+            }, 100);
+        }
+
+        // Ganti teks tombol
+        const buttonText = misiButton.querySelector('span');
+		buttonText.textContent = isExpanding ? 'Tutup' : 'Lihat Selengkapnya';
+    }
+
+    // Tambahkan event listener untuk tombol dan card
+    misiButton.addEventListener('click', toggleCard);
+    misiCard.addEventListener('click', toggleCard);
+});
