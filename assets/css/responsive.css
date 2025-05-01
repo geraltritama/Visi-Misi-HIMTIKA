@@ -1,0 +1,252 @@
+@media only screen and (max-width: 7000px){
+	.page-wrapper{
+		overflow: hidden;
+	}
+}
+
+
+@media only screen and (max-width: 1023px){
+	.main-header .nav-outer .main-menu,
+	.sticky-header{
+		display: none !important;
+	}
+
+	.nav-outer .mobile-nav-toggler{
+		display: block;
+		margin: 0;
+		padding: 24px 0;
+	}
+	
+	.main-header .header-upper .nav-outer:before{
+		display:none;	
+	}
+
+	.main-header .dropdown > a > i{
+		display: none;
+	}
+	
+	.main-header .nav-outer{
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		margin-left: 10px;
+		width:auto;
+		float:none;	
+	}
+	
+	.main-header .nav-outer .logo-outer{
+		position:relative;
+		left:0;
+		top: 8px;
+		width:auto;
+		height:auto;
+		margin:0;
+		-webkit-transform: translateX(0);
+		-ms-transform: translateX(0);
+		transform: translateX(0);	
+	}
+
+	.nav-outer .mobile-nav-toggler{
+		position: absolute;
+		right: 10px;
+		top: 60%;
+		transform: translateY(-50%);
+		line-height: 50px;
+		display: block;
+		margin: 0;
+		padding: 24px 0;
+	}
+
+	/* =============== section Footer ================ */
+      .footer-text{
+        display: flex;
+        position: relative;
+        gap: 60px;
+        padding: 20px 20px 0 20px;
+      }
+      .logo-section{
+        margin-left: 0px;
+      }
+      .section-3{
+        margin-top: -20px; 
+      }
+}
+
+/* ===================== RESPONSIVE FOR MOBILE ===================== */
+@media (max-width: 768px) {
+	.section1 {
+		padding: 2rem;
+	}
+	
+	.section1 .content h1 {
+		font-size: 10vw;
+		margin: 70px 0 0 0;
+	}
+	.section1 p {
+		margin-top: 5px;
+		font-weight: normal;
+		font-size: 3vw;
+	}
+	.background-image{
+		top: 55%;
+		width: 110%;
+	}
+	
+	.shield-image {
+		margin-top: 1rem;
+	}
+
+	.btn {
+		font-size: 3vw;
+		padding: 1vw 3vw;
+	}
+
+
+	.section2 {
+		margin-top: 4rem;
+		padding: 0 2rem;
+	}
+	.section2 .content-2 h1 {
+		font-size: 4.2vw;
+	}
+	.left-hand {
+		width: 80%;
+		left: -36%;
+		top: -210%;
+	}
+
+	.right-hand {
+		width: 80%;
+		left: 60%;
+		top: -50%;
+	}
+
+
+	.card-visi, .card-misi {
+		width: 100%;
+		border-radius: 30px;
+		padding: 20px;
+		height: auto;
+	} 
+	.section3 {
+		margin-top: 3rem;
+		padding: 2.5rem;
+	}
+	
+	.section3 .logovisi {
+		width: 30%;
+		margin-bottom: 0;
+	}
+
+	.section3 h1 {
+		font-size: 1.5rem;
+	}
+	.hover-button {
+		font-size: 12px;
+	}
+	#visiText {
+		font-size: 0.9rem;
+		line-height: 1.4;
+		padding-bottom: 0.5rem;
+	}
+	#visiCard.expanded h1 {
+		color: #ffffff;
+		font-size: 1.5rem;
+		transform: translateX(30px) translateY(-90px) !important;
+		transition: transform 0.6s ease, color 0.6s ease;
+	}
+	#visiCard.expanded img.logovisi {
+		transform: scale(0.8) translateX(-35px) translateY(-25px) !important;
+		transition: transform 0.6s ease;
+	}
+	#visiCard.expanded #visiText {
+		max-width: 700px;
+		margin-top: -5rem;
+	}
+	
+	
+	.section4 {
+		margin-top: -3rem;
+		margin-bottom: 0;
+		padding: 3.5rem;
+	}
+	.section4 .logomisi {
+		width: 30%;
+		margin-bottom: 0;
+	}
+	.section4 h1 {
+		font-size: 1.5rem;
+	}
+	.hover-button {
+		font-size: 12px;
+	}
+	#misiText {
+		font-size: 3.5vw;
+		line-height: 1.4;
+		margin-bottom: 2rem;
+	}
+	#misiCard.expanded h1 {
+		color: #ffffff;
+		font-size: 1.5rem;
+		transform: translateX(30px) translateY(-90px) !important;
+		transition: transform 0.6s ease, color 0.6s ease;
+	}
+	#misiCard.expanded img.logomisi {
+		transform: scale(0.8) translateX(-35px) translateY(-25px) !important;
+		transition: transform 0.6s ease;
+	}
+	#misiCard.expanded #misiText {
+		max-width: 700px;
+		margin-top: -5rem;
+	}
+
+	.section5 {
+		margin-top: -6rem;
+		margin-bottom: 0;
+		padding: 3.5rem;
+	}
+	.section5 h1 {
+		font-size: 4.27vw;
+		margin: 0;
+	}
+	
+	.section5 p {
+		margin-top: 2rem;
+		font-size: 3.5vw;
+	}
+	
+
+	.section6 {
+		max-width: 100%;
+		flex-direction: column;
+		padding: 1rem;
+		text-align: center;
+		margin-bottom: 0;
+	}
+
+	.section6 .stat {
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 0;
+	}
+
+	.section6 .number {
+		font-size: 64px;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+
+	.section6 p {
+		font-size: 4.27vw;
+	}
+}
+
+
+@media only screen and (min-width: 768px){
+	.main-menu .navigation > li > ul,
+	.main-menu .navigation > li > ul > li > ul{
+		display:block !important;
+		visibility:hidden;
+		opacity:0;
+	}
+}
