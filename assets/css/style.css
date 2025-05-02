@@ -770,7 +770,7 @@ ul,li{
 .background-image {
 	position: absolute;
 	width: 100%;
-	opacity: 0.08;
+	opacity: 0.1;
 	border-radius: 10px;
 	transform: translate(-50%, -50%);
 	top: 50%; 
