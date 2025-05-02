@@ -145,7 +145,7 @@
 		font-size: 12px;
 	}
 	#visiText {
-		font-size: 0.9rem;
+		font-size: 3.5vw;
 		line-height: 1.4;
 		padding-bottom: 0.5rem;
 	}
@@ -199,9 +199,15 @@
 		max-width: 700px;
 		margin-top: -5rem;
 	}
+	.section4 .blob2 {
+		left: -80px;
+		bottom: 70px;
+		width: 50%;
+		opacity: 0.3;
+	}
 
 	.section5 {
-		margin-top: -6rem;
+		margin-top: -8rem;
 		margin-bottom: 0;
 		padding: 3.5rem;
 	}
@@ -214,7 +220,11 @@
 		margin-top: 2rem;
 		font-size: 3.5vw;
 	}
-	
+	.section5 .jempol {
+		top: 130px;
+		right: -165px;
+		width: 50%;
+	}
 
 	.section6 {
 		max-width: 100%;
