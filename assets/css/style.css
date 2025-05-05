@@ -2,9 +2,14 @@
 @import url('scrollbar.css'); /* scroll pada mobile*/
 @import url('animated.css'); /* animasi */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Figtree';
+    text-decoration: none;
+} 
 body {
-	margin:0px;
-	padding:0px;
 	border:none;
 	outline:none;
 	font-size: 100%;
@@ -13,7 +18,9 @@ body {
 	font-weight:400;
 	background: #110621;
 }
-
+html {
+	scroll-behavior: smooth;
+}
 ::-webkit-scrollbar {
     display: none;
 }
@@ -202,6 +209,7 @@ ul,li{
 	float: right;
 	width:100%;
 	z-index:1;
+	margin-top: 5px;
 }
 
 .main-header .nav-outer .logo-header{
@@ -815,7 +823,6 @@ p {
 	font-size: 1vw; 
 	padding: 0.5vw 2vw; 
 	background-color: #272A4D;
-	color: #fff;
 	border: none;
 	border-radius: 10px;
 	cursor: pointer;
@@ -823,14 +830,17 @@ p {
 }
 .btn:hover {
 	background-color: #fff;
+}
+.btn a {
+	color: #fff;
+}
+.btn:hover a {
 	color: #252742;
 }
-
 .btn i {
     transition: transform 0.3s ease-in-out;
     transform-origin: center; 
 }
-
 .btn:hover i {
     transform: rotate(30deg); 
 }
