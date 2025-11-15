@@ -104,21 +104,20 @@
 
 	.section2 {
 		margin-top: 4rem;
-		padding: 0 2rem;
 	}
 	.section2 .content-2 h1 {
-		font-size: 4.2vw;
+		font-size: 3.8vw;
 	}
 	.left-hand {
 		width: 80%;
-		left: -36%;
-		top: -210%;
+		left: -40%;
+		top: -220%;
 	}
 
 	.right-hand {
 		width: 80%;
 		left: 60%;
-		top: -50%;
+		top: -100%;
 	}
 
 
@@ -212,6 +211,7 @@
 		margin-top: -8rem;
 		margin-bottom: 0;
 		padding: 3.5rem;
+		height: 50vh;
 	}
 	.section5 h1 {
 		font-size: 4.27vw;
