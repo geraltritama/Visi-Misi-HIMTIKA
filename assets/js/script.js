@@ -118,8 +118,8 @@ document.addEventListener("DOMContentLoaded", function () {
             // Expand
             visiText.style.height = visiText.scrollHeight + "px";
             visiText.style.opacity = "1";
-            h1.style.transform = "translateX(50px) translateY(-300px)";
-            logo.style.transform = "scale(0.4) translateX(-80px) translateY(-300px)";
+            h1.style.transform = "translateX(50px) translateY(-250px)";
+            logo.style.transform = "scale(0.4) translateX(-80px) translateY(-270px)";
         } else {
         	// Collapse
 			visiText.style.height = visiText.scrollHeight + "px"; // set current height
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
             misiText.style.transition = 'height 0.6s ease, opacity 0.3s ease 0.3s'; // Set transition for expand
             misiText.style.height = misiText.scrollHeight + "px";
             misiText.style.opacity = "1";
-            logo.style.transform = "scale(0.4) translateX(-80px) translateY(-300px)";
+            logo.style.transform = "scale(0.4) translateX(-80px) translateY(-20px)";
         } else {
             // Collapse without animation
             misiText.style.transition = 'none'; // Remove transition for instant collapse
